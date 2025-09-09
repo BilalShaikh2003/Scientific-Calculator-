@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="brand">CASIO</div>
+        <div class="model">fx </div>
+        
+        <div class="display-container">
+            <div class="display">
+                <div class="expression" id="expression"></div>
+                <div class="result" id="result">0</div>
+            </div>
+            <div class="mode-indicators">
+                <span class="indicator" id="deg">DEG</span>
+                <span class="indicator" id="rad" style="display:none;">RAD</span>
+                <span class="indicator" id="grad" style="display:none;">GRAD</span>
+                <span class="indicator" id="fix">FIX</span>
+                <span class="indicator" id="sci">SCI</span>
+            </div>
+        </div>
+
+        <div class="button-grid">
+            <button class="btn func" onclick="calculator.shift()">SHIFT</button>
+            <button class="btn func" onclick="calculator.mode()">MODE</button>
+            <button class="btn func ac" onclick="calculator.clear()">AC</button>
+            <button class="btn func" onclick="calculator.delete()">DEL</button>
+            
+            <button class="btn func" onclick="calculator.reciprocal()">1/x</button>
+            <button class="btn func" onclick="calculator.sin()">sin</button>
+            <button class="btn func" onclick="calculator.cos()">cos</button>
+            <button class="btn func" onclick="calculator.tan()">tan</button>
+            
+            <button class="btn func" onclick="calculator.log()">log</button>
+            <button class="btn func" onclick="calculator.ln()">ln</button>
+            <button class="btn func" onclick="calculator.openParen()">(</button>
+            <button class="btn func" onclick="calculator.closeParen()">)</button>
+            
+            <button class="btn func" onclick="calculator.square()">x²</button>
+            <button class="btn func" onclick="calculator.power()">x^y</button>
+            <button class="btn func" onclick="calculator.sqrt()">√</button>
+            <button class="btn op" onclick="calculator.operator('/')">/</button>
+            
+            <button class="btn func" onclick="calculator.exp()">EXP</button>
+            <button class="btn num" onclick="calculator.number('7')">7</button>
+            <button class="btn num" onclick="calculator.number('8')">8</button>
+            <button class="btn num" onclick="calculator.number('9')">9</button>
+            
+            <button class="btn op" onclick="calculator.operator('*')">×</button>
+            <button class="btn num" onclick="calculator.number('4')">4</button>
+            <button class="btn num" onclick="calculator.number('5')">5</button>
+            <button class="btn num" onclick="calculator.number('6')">6</button>
+            
+            <button class="btn op" onclick="calculator.operator('-')">-</button>
+            <button class="btn num" onclick="calculator.number('1')">1</button>
+            <button class="btn num" onclick="calculator.number('2')">2</button>
+            <button class="btn num" onclick="calculator.number('3')">3</button>
+            
+            <button class="btn op" onclick="calculator.operator('+')">+</button>
+            <button class="btn func" onclick="calculator.negate()">+/-</button>
+            <button class="btn num" onclick="calculator.number('0')">0</button>
+            <button class="btn num" onclick="calculator.decimal()">.</button>
+            
+            <button class="btn equals" onclick="calculator.equals()" colspan="2">=</button>
+            <button class="btn func" onclick="calculator.pi()">π</button>
+            <button class="btn func" onclick="calculator.ans()">ANS</button>
+        </div>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
